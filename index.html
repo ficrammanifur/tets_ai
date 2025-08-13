@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 AI Chat Assistant</h1>
+            <p>Pilih model AI dan mulai bertanya!</p>
+        </header>
+
+        <div class="chat-container">
+            <!-- Model Selection -->
+            <div class="model-selection">
+                <label for="model-select">Pilih Model AI:</label>
+                <select id="model-select">
+                    <option value="gemini">Google Gemini</option>
+                    <option value="claude">Anthropic Claude</option>
+                    <option value="gpt">OpenAI GPT</option>
+                    <option value="groq">Groq</option>
+                </select>
+            </div>
+
+            <!-- Chat History -->
+            <div class="chat-history" id="chat-history">
+                <div class="welcome-message">
+                    <p>👋 Selamat datang! Silakan ajukan pertanyaan Anda.</p>
+                </div>
+            </div>
+
+            <!-- Input Form -->
+            <form class="input-form" id="chat-form">
+                <div class="input-group">
+                    <textarea 
+                        id="question-input" 
+                        placeholder="Ketik pertanyaan Anda di sini..."
+                        rows="3"
+                        required
+                    ></textarea>
+                    <button type="submit" id="submit-btn">
+                        <span class="btn-text">Kirim</span>
+                        <div class="loading-spinner" id="loading-spinner"></div>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
